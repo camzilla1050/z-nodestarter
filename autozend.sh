@@ -55,9 +55,6 @@ pidZend=$([ ! -z "$(pidof zend)" ] && echo "TRUE" || echo "FALSE" ); #echo $pidZ
 # PID of Zentracker
 pidZenTracker=$([ ! -z "$(pidof zentracker)" ] && echo "TRUE" || echo "FALSE" ); #echo $pidTracker;
 
-statusOfService() { 
-	echo $([[ $(sudo systemctl status $1 | grep Active: | cut -d' ' -f6) = "(running)" ]] && echo "ACTIVE" || echo "INACTIVE"); 
-	}
 #
 
 if [ $geti = FALSE ] || [ $pidZend = FALSE ]
