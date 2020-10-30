@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#--> CONFIGURE YOUR Variables
-
+#--> CONFIGURE YOUR VALUES HERE !
 # Service
 SERVICE=zend.service
 # Domain name of your zen server
@@ -9,7 +8,7 @@ dns= #myserverdomainname
 # Path of your config file. By default: /etc/zen.conf
 conf=  $HOME"/.zen/zen.conf"
 
-#
+# 
 #-----------------------------------------------------------------------------
 # Check if file exists; if true then initialize public address of config file
 if test -e $conf
@@ -32,9 +31,9 @@ if [ ! -e "$conf" ]
 	elif [ $c_addr != $p_addr ] 
 		#then echo "Both address matches. Nice, nothing to do";
 		then echo "Your actual address don't match with your config file values!. 
-			This bash script must :
-			|- Change your public address in your zen node config file
-			|- Restart the zend node service"; 
+			This bash script will :
+			|- change your public address in your zen node config file
+			|- restart your zend node service"; 
 		echo "Writing now in your \""$conf"\" the new public address...";			
 
 # replace in config file externalip=xx.xx.xx.xx with 'sed' command
