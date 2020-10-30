@@ -10,6 +10,7 @@ Script runs on Ubuntu 16.04.7 LTS
 run with: 
 
 sudo chmod +x autozend.sh
+
 sudo ./autozend.sh
 
 
