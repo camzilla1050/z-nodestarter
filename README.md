@@ -7,7 +7,7 @@ No dependencies -
 
 Script runs on Ubuntu 16.04.7 LTS
 
-run with: 
+Use the script: 
 
 sudo chmod +x autozend.sh
 
