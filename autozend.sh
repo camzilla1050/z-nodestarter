@@ -47,7 +47,6 @@ cat $conf | grep externalip
 fi
 
 # if zen-cli return public addres means that service zend is running
-#if [[ $(zen-cli getnetworkinfo | grep \"address\" | cut -d'"' -f4) = $p_addr ]]; then echo "zen-cli: connection with zend service seems running. PID of zend: "$(pidof zend); geti=TRUE ; else echo "zen-cli: something goes wrong with zend service"; geti=FALSE; fi
 # Ternary operator
 # Source: https://stackoverflow.com/questions/3953645/ternary-operator-in-bash
 geti=$([[ $(zen-cli getnetworkinfo | grep \"address\" | cut -d'"' -f4) = $p_addr ]] && echo "TRUE" || echo "FALSE" ); #echo $geti
