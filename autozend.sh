@@ -25,6 +25,9 @@ fi
 p_addr=$(nslookup $dns | tail -2 | cut -d' ' -f2)
 echo "Your actual public address is: "$p_addr
 
+# Init While loop
+while :
+do
 if [ ! -e "$conf" ] 
 	then 
 		echo "Sorry config file not found";
@@ -74,7 +77,8 @@ if [ $geti = FALSE ] || [ $pidZend = FALSE ]
 	sudo systemctl status zenupdate.timer
 
 fi
-
+sleep 10
+done
 
 
 
