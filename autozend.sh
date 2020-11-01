@@ -43,10 +43,10 @@ if [ ! -e "$conf" ]
 # Source: https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/
 		sed -i 's/'$c_addr'/'$p_addr'/g' $conf
 
-		# Write modification date in a log file
-		#echo "#Changed:"$(date) >> $conf
+# Write modification date in a log file
+		echo "#Changed:"$(date)" - IP="$p_addr >> $HOME"/zendfile.log"
 
-cat $conf | grep externalip	
+		cat $conf | grep externalip	
 fi
 
 # if zen-cli return public addres means that service zend is running
