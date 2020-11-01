@@ -16,7 +16,9 @@ CONFIGURE YOUR Variables:
 
 sudo chmod +x autozend.sh
 
-sudo ./autozend.sh
+Run the script on a background process:
+
+sudo ./autozend.sh &
 
 
 
