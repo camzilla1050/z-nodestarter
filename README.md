@@ -8,6 +8,11 @@ No dependencies -
 Script runs on Ubuntu 16.04.7 LTS
 
 Use the script: 
+---------------
+
+CONFIGURE YOUR Variables:
+  dns
+  conf (by default=$HOME"/Workz/bash/zen.conf")
 
 sudo chmod +x autozend.sh
 
