@@ -5,7 +5,7 @@
 SERVICE=zend.service
 # Domain name of your zen server
 dns= #myserverdomainname
-# Path of your config file. By default: /etc/zen.conf
+# Path of your config file. By default: $HOME"/.zen/zen.conf"
 conf=$HOME"/.zen/zen.conf"
 
 # 
