@@ -62,7 +62,6 @@ pidZenTracker=$([ ! -z "$(pidof zentracker)" ] && echo "TRUE" || echo "FALSE" );
 
 if [ $geti = FALSE ] || [ $pidZend = FALSE ]
 	then
-	echo "On continue ici";
 	if [ $(sudo systemctl status $SERVICE | grep Active: | cut -d' ' -f6) = "(running)" ];
 		then
 			echo "this service is active. Must be restarted to take effect"; 
