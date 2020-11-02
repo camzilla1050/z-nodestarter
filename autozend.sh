@@ -49,13 +49,13 @@ if [ ! -e "$conf" ]
 		cat $conf | grep externalip	
 fi
 
-# if zen-cli return public addres means that service zend is running
+# if $zen-cli return public addres means that service zend is running
 # Ternary operator
 # Source: https://stackoverflow.com/questions/3953645/ternary-operator-in-bash
 geti=$([[ $(zen-cli getnetworkinfo | grep \"address\" | cut -d'"' -f4) = $p_addr ]] && echo "TRUE" || echo "FALSE" ); #echo $geti
-# PID of Zend
+# PID of zend
 pidZend=$([ ! -z "$(pidof zend)" ] && echo "TRUE" || echo "FALSE" ); #echo $pidZend;
-# PID of Zentracker
+# PID of zentracker
 pidZenTracker=$([ ! -z "$(pidof zentracker)" ] && echo "TRUE" || echo "FALSE" ); #echo $pidTracker;
 
 #
