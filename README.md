@@ -12,7 +12,7 @@ Use the script:
 
 CONFIGURE YOUR Variables:
   dns
-  conf (by default=$HOME/zen.conf)
+  conf (by default=$HOME/.zen/zen.conf)
 
 sudo chmod +x autozend.sh
 
