@@ -40,7 +40,6 @@ if [ ! -e "$conf" ]
 		echo "Writing now in your \""$conf"\" the new public address...";			
 
 # replace in config file externalip=xx.xx.xx.xx with 'sed' command
-# Source: https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/
 		sed -i 's/'$c_addr'/'$p_addr'/g' $conf
 
 # Write modification date in a log file
@@ -51,7 +50,6 @@ fi
 
 # if $zen-cli return public addres means that service zend is running
 # Ternary operator
-# Source: https://stackoverflow.com/questions/3953645/ternary-operator-in-bash
 geti=$([[ $(zen-cli getnetworkinfo | grep \"address\" | cut -d'"' -f4) = $p_addr ]] && echo "TRUE" || echo "FALSE" ); #echo $geti
 # PID of zend
 pidZend=$([ ! -z "$(pidof zend)" ] && echo "TRUE" || echo "FALSE" ); #echo $pidZend;
