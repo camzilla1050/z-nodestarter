@@ -5,7 +5,7 @@ No dependencies -
 
 * possibles errors depending the linux distribution or versions, with options of 'cut -d...-f' shell command.
 
-Script runs on Ubuntu 16.04.7 LTS
+Script runs properly on Ubuntu 16.04.7 LTS
 
 Use the script: 
 ---------------
